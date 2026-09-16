@@ -24,3 +24,450 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: backdrop-filter;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #393b3c;
+  font-family: "TU-FONT", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #161341;
+}
+
+.call-button {
+  display: inline-block;
+  padding: 0.4rem 3rem 0.8rem 3rem;
+  border-radius: 999px;
+  background: #161341;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.call-button::after {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  content: "🕿";
+  opacity: 0;
+  max-width: 0;
+  transform: scale(0);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: #302b78;
+}
+
+.call-button:hover::after {
+  opacity: 1;
+  max-width: 20px;
+  transform: scale(1.1);
+  margin-left: 10px;
+}
+
+/* ==========================================================================
+   CFS FOOTER
+   ========================================================================== */
+
+.footer.footer-cfs {
+  background: #2b2b5e;
+  color: #ffffff;
+}
+
+.footer.footer-cfs .footer-col h4 {
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer.footer-cfs .footer-col p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+}
+
+.footer.footer-cfs .footer-col a {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+}
+
+.footer.footer-cfs .footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer.footer-cfs .disclosure-btn {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer.footer-cfs .disclosure-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.footer.footer-cfs .disclosures {
+  background: rgba(255, 255, 255, 0.97);
+  color: #252c3e;
+}
+
+.footer.footer-cfs .disclosures p,
+.footer.footer-cfs .disclosures li {
+  color: #252c3e;
+  font-family: Arial, sans-serif;
+}
+
+.footer.footer-cfs .disclosures h4 {
+  color: #2b2b5e;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer.footer-cfs .disclosure-accent {
+  color: #2b2b5e;
+}
+
+/* ==========================================================================
+   6. CHAMPION FOOTER & DISCLOSURES
+   ========================================================================== */
+
+.footer {
+  margin-top: 60px;
+  padding: 55px 30px 45px;
+
+  background: linear-gradient(
+    135deg,
+    #006738 0%,
+    #075b39 55%,
+    #0a5138 100%
+  );
+
+  color: #ffffff;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   FOOTER COLUMNS
+   ========================================================================== */
+
+.footer-wide {
+  flex: 2;
+  min-width: 400px;
+}
+
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  flex: 1;
+  min-width: 150px;
+}
+
+
+.footer-col h4 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+
+.footer-col p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.82);
+
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.footer-col a:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+
+/* ==========================================================================
+   DISCLOSURE BUTTON
+   ========================================================================== */
+
+.disclosure-btn {
+  display: block;
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+
+  background: #ef4136;
+  color: #ffffff;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.disclosure-btn:hover {
+  background: #d9362d;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ==========================================================================
+   DISCLOSURE PANEL
+   ========================================================================== */
+
+.disclosures {
+  margin-top: 16px;
+  padding: 24px;
+
+  max-height: 320px;
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.97);
+  color: #393b3c;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+.disclosures p {
+  margin: 0 0 16px;
+
+  color: #4b4b4b;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.disclosures h4 {
+  margin: 0 0 14px;
+
+  color: #006738;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+
+.disclosures ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+
+.disclosures li {
+  margin-bottom: 10px;
+
+  color: #4b4b4b;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* Champion accents inside the disclosure */
+
+.disclosure-accent {
+  color: #006738;
+  font-weight: 800;
+}
+
+
+/* Utilitarios sueltos */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+}
+
+.thank-you-footer {
+  width: 100%;
+}
+
+/* ==========================================================================
+   THANK YOU PAGE FOOTER
+   ========================================================================== */
+
+.footer.footer-thank-you {
+  background: #2b2b5e;
+  color: #ffffff;
+}
+
+/* Footer headings */
+.footer.footer-thank-you .footer-col h4 {
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Footer text */
+.footer.footer-thank-you .footer-col p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+}
+
+/* Footer links */
+.footer.footer-thank-you .footer-col a {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+}
+
+.footer.footer-thank-you .footer-col a:hover {
+  color: #ffffff;
+}
+
+/* Disclosure button */
+.footer.footer-thank-you .disclosure-btn {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer.footer-thank-you .disclosure-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Disclosure panel */
+.footer.footer-thank-you .disclosures {
+  background: rgba(255, 255, 255, 0.97);
+  color: #252c3e;
+}
+
+/* Disclosure text */
+.footer.footer-thank-you .disclosures p,
+.footer.footer-thank-you .disclosures li {
+  color: #252c3e;
+  font-family: Arial, sans-serif;
+}
+
+/* Disclosure headings */
+.footer.footer-thank-you .disclosures h4 {
+  color: #2b2b5e;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Remove Champion green from disclosure accents */
+.footer.footer-thank-you .disclosure-accent {
+  color: #2b2b5e;
+}
+
+
+@media(max-width:768px){
+
+ .footer {
+    padding: 45px 20px 35px;
+  }
+
+  .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 15px;
+}
+
+.footer-wide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.footer-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+  .disclosures {
+    max-height: 360px;
+    padding: 20px;
+  }
+ }

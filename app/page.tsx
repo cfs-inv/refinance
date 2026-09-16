@@ -3,6 +3,8 @@
 
 import { useState, Suspense } from 'react';
 import RefinanceForm from './components/RefinanceForm';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'lower_payment' | 'extra_cash'>('lower_payment');
@@ -16,7 +18,10 @@ export default function Home() {
   };
 
   return (
+    <>
     <main className="min-h-screen bg-slate-50 text-slate-900">
+
+      <Navbar></Navbar>
       
       {/* HERO SECTION */}
       <section className="max-w-6xl mx-auto px-4 pt-16 pb-8 text-center">
@@ -115,5 +120,8 @@ export default function Home() {
       </section>
 
     </main>
+
+<Footer variant="cfs" />
+    </>
   );
 }
